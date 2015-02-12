@@ -13,7 +13,7 @@ app.set('port' , mc.server.port);
 app.set('ip' , mc.server.ip);
 
 app.get('/' , function(req , res) {
-	req.json({ hello : 'world' });
+	res.json({ hello : 'world' });
 });
 
 //create http server with all express options
@@ -24,7 +24,7 @@ mongoose.connect('mongodb://' + mc.database.user + ':'
                               + mc.database.host + ':' 
                               + mc.database.port + '/' 
                               + mc.database.db , function(err) {
-	if (err) throw { 
+  if (err) throw { 
 		name : 'DB Connection Error',
 		message : 'Unable to connect to DB: ' + err };
 	server.listen(app.get('port') , app.get('ip') , function(err) {
@@ -35,3 +35,5 @@ mongoose.connect('mongodb://' + mc.database.user + ':'
 		console.log('Server listening on ' + app.get('ip') + ':' + app.get('port'));
 	});
 });
+
+module.exports = server;
