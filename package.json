@@ -1,0 +1,29 @@
+{
+  "name": "mean-skeleton",
+  "version": "1.0.0",
+  "description": "MEAN skeleton for Openshift servers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvaldovinos/mean-skeleton.git"
+  },
+  "keywords": [
+    "openshift",
+    "mean",
+    "skeleton"
+  ],
+  "author": "Luis Valdovinos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lvaldovinos/mean-skeleton/issues"
+  },
+  "homepage": "https://github.com/lvaldovinos/mean-skeleton",
+  "dependencies": {
+    "express": "^4.11.2",
+    "mongoose": "^3.8.23",
+    "my-config": "^1.0.1"
+  }
+}

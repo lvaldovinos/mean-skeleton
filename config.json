@@ -1,0 +1,15 @@
+{
+	"dev" : {
+		"database" : {
+			"user" : "$OPENSHIFT_MONGODB_DB_USERNAME", 
+			"password" : "$OPENSHIFT_MONGODB_DB_PASSWORD", 
+			"host" : "$OPENSHIFT_MONGODB_DB_HOST", 
+			"port" : "$OPENSHIFT_MONGODB_DB_PORT", 
+			"db" : "$OPENSHIFT_APP_NAME"
+		},
+		"server" : {
+			"ip" :  "$OPENSHIFT_NODEJS_IP",
+			"port" : "$OPENSHIFT_NODEJS_PORT"
+		}
+	}
+}
