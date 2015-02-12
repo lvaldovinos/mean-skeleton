@@ -1,12 +1,12 @@
 'use strict';
 
 var http = require('http'),
-	express = require('express'),
-	mongoose = require('mongoose'),
-	path = require('path'),
-	mc = require('my-config').init(path.resolve(__dirname , './config.json')),
-	app = express(),
-	server;
+    express = require('express'),
+    mongoose = require('mongoose'),
+    path = require('path'),
+    mc = require('my-config').init(path.resolve(__dirname , './config.json')),
+    app = express(),
+    server;
 
 //global settings
 app.set('port' , mc.server.port);
@@ -20,10 +20,10 @@ app.get('/' , function(req , res) {
 server = http.createServer(app);
 //connect to mongodb instance before make server listen
 mongoose.connect('mongodb://' + mc.database.user + ':' 
-							+ mc.database.password + '@' 
-							+ mc.database.host + ':' 
-							+ mc.database.port + '/' 
-							+ mc.database.db , function(err) {
+                              + mc.database.password + '@' 
+                              + mc.database.host + ':' 
+                              + mc.database.port + '/' 
+                              + mc.database.db , function(err) {
 	if (err) throw { 
 		name : 'DB Connection Error',
 		message : 'Unable to connect to DB: ' + err };
